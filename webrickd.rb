@@ -3,6 +3,7 @@
 require 'webrick'
 include WEBrick
 
+# Sure ./ works for linux, but this is what it takes to be OS independent
 doc_root = File.dirname(__FILE__)+File::SEPARATOR+"static-html"
 
 # Create an HTTP server
