@@ -3,13 +3,7 @@
 require 'webrick'
 include WEBrick
 
-if __FILE__.include? "/"
-  DS = "/"
-else
-  DS = "\\"
-end
-
-doc_root = File.dirname(__FILE__)+DS+"static-html"
+doc_root = File.dirname(__FILE__)+File::SEPARATOR+"static-html"
 
 # Create an HTTP server
 s = HTTPServer.new(
